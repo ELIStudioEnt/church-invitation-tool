@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Create church invitation Etsy listings and promotional copy locally.">
+  <title>Etsy Listing Generator for Church Invitations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./">✦ SUNDAY RISE</a>
+    <span>Tools for meaningful gatherings</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CREATE WITH PURPOSE</p>
+      <h1>Thoughtful listings.<br><em>Meaningful gatherings.</em></h1>
+      <h2>Etsy Listing Generator for Church Invitations</h2>
+      <p>Create polished listing copy and social posts from your invitation details.</p>
+      <div class="benefits">
+        <span>✦ No login</span>
+        <span>✦ Works offline</span>
+        <span>✦ Free to use</span>
+      </div>
+    </section>
+
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="details-heading">
+        <p class="eyebrow">01 · YOUR DETAILS</p>
+        <h2 id="details-heading">Tell us about your invitation</h2>
+        <p class="muted">Complete all six fields to get started.</p>
+
+        <form id="listing-form">
+          <label for="title">Invitation Title</label>
+          <input id="title" name="title" maxlength="140"
+                 placeholder="Gather in Grace" required>
+          <small data-count="title"></small>
+
+          <label for="church">Church Name</label>
+          <input id="church" name="church" maxlength="100"
+                 placeholder="Grace Community Church" required>
+          <small data-count="church"></small>
+
+          <label for="event">Event Type</label>
+          <input id="event" name="event" maxlength="80"
+                 list="events" placeholder="Church Anniversary" required>
+          <datalist id="events">
+            <option value="Church Anniversary">
+            <option value="Sunday Service">
+            <option value="Worship Night">
+            <option value="Baptism">
+            <option value="Easter Service">
+            <option value="Christmas Service">
+            <option value="Women's Conference">
+            <option value="Youth Gathering">
+          </datalist>
+          <small data-count="event"></small>
+
+          <label for="main">Main Keyword</label>
+          <input id="main" name="main" maxlength="80"
+                 placeholder="church invitation" required>
+          <small data-count="main"></small>
+
+          <label for="secondary">Secondary Keyword</label>
+          <input id="secondary" name="secondary" maxlength="80"
+                 placeholder="anniversary invitation" required>
+          <small data-count="secondary"></small>
+
+          <label for="description">Short Description</label>
+          <textarea id="description" name="description"
+                    rows="4" maxlength="800"
+                    placeholder="Describe the design, style, and confirmed product details."
+                    required></textarea>
+          <small data-count="description"></small>
+
+          <button class="primary" type="submit">Generate listing ↗</button>
+          <button class="clear" id="clear" type="button">Clear All</button>
+          <p class="privacy">Your details stay on this page. Nothing is uploaded.</p>
+        </form>
+      </section>
+
+      <section class="output-panel" aria-labelledby="output-heading">
+        <p class="eyebrow">02 · YOUR LISTING TOOLKIT</p>
+        <h2 id="output-heading">Words ready to share</h2>
+        <p class="muted">Etsy, Pinterest, and Facebook — in one place.</p>
+
+        <div id="results">
+          <div class="empty">
+            <span aria-hidden="true">✧</span>
+            <h3>Your next listing starts here.</h3>
+            <p>Add your details, then select Generate listing.</p>
+          </div>
+        </div>
+
+        <p class="review">
+          Template-based copy generated locally. Review product details and
+          wording before publishing. Not affiliated with Etsy.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>Made to inspire. Written to welcome.</footer>
+  <div id="status" role="status" aria-live="polite"></div>
+</body>
+</html>
